@@ -29,7 +29,7 @@ export default function ObjectPage() {
         <div>
           <img src={objectData?.image} alt="..." className="obj-img"/>
         </div>
-        <div>
+        <div style={{maxWidth: "700px"}}> 
             <p className="obj-desc"><b>Description:</b> {objectData?.description}</p>
             <p className="obj-desc"><b>Rating:</b> {objectData?.rating}</p>
             <p className="obj-desc"><b>Reviews:</b> {objectData?.reviews}</p>
