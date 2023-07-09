@@ -1,0 +1,35 @@
+.Continent-sec-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.Obj-sec-2 {
+    color: white;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.obj-img {
+    width: 350px;
+    height: 350px;
+}
+
+.obj-desc b {
+    color: blue;
+}
+
+.Continent-sec-1 h1{
+    color: white;
+    text-align: center;
+}
+
+.Continent-sec-1 h2{
+    color: blue;
+    text-align: center;
+}
+
