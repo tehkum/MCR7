@@ -19,6 +19,12 @@ export default function ObjectPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contid, conId, objId]);
 
+  const link =  (web) => {
+    // var url = `web`;
+    // window.location.href = url;
+    window.open(web, '_blank');
+    }
+
   return (
     <div>
       <Header/>
@@ -36,6 +42,7 @@ export default function ObjectPage() {
             <p className="obj-desc"><b>Location:</b> {objectData?.location}</p>
             <p className="obj-desc"><b>Opening Hours:</b> {objectData?.openingHours}</p>
             <p className="obj-desc"><b>Ticket Prices:</b> {objectData?.ticketPrice}</p>
+            <p style={{cursor: "pointer", color: "pink"}} onClick={()=>link(objectData?.website)}><b>Website</b></p>
         </div>
       </div>
     </div>
