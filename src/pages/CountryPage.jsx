@@ -10,16 +10,18 @@ export default function CountryPage(){
     const { contid } = useParams();
     const { continentData } = useItems();
     const [ countryData, setCountryData ] = useState([]);
+    const [ countryname, setCountryName ] = useState("")
 
     useEffect(()=>{
         setCountryData(continentData.find(continent=>+continent?.id === +contid).countries);
+        setCountryName(continentData.find(continent=>+continent?.id === +contid).name)
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[contid]);
 
     return <div>
         <Header />
     <div className="Continent-sec-1">
-        <h2 style={{color: "white"}}>Top Countries in asia as your next holiday</h2>
+        <h2 style={{color: "white"}}>Top Countries in {countryname} as your next holiday</h2>
     </div>
     <div className="Continent-sec-2">
       {countryData?.map((country) => (
